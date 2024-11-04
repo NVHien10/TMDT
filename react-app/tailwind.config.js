@@ -4,14 +4,15 @@ export default {
   theme: {
     extend: {
       screens: {
-        xs: "480px", // Tạo thêm một breakpoint cho màn hình rất nhỏ
-        "custom-md": "700px", // Breakpoint tùy chỉnh cho màn hình 850px
-        "custom-lg": "1100px", // Breakpoint tùy chỉnh cho màn hình 1100px
+        smm: "478px", // Tạo thêm một breakpoint cho màn hình 478px
+        mdd: "991px", // Breakpoint tùy chỉnh cho màn hình 991px
+        lgg: "1440px", // Breakpoint tùy chỉnh cho màn hình 1440px
       },
       fontFamily: {
         lato: ["Lato", "sans-serif"],
         Inter: ["Inter", "sans-serif"],
       },
+      
     },
   },
   plugins: [],

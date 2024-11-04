@@ -6,86 +6,92 @@ import iconIntergram from "./image/header/Vector 2998.png";
 import facebook from "./image/header/Vector 2998.png";
 import telegram from "./image/header/Subtract.png";
 import thanhTimKiem from "./image/footer/VectorTImKiem.png";
+import divider from "./image/footer/Divider.png";
 
+const Foot = [
+  {
+    id: 1,
+    h1: "Company",
+    item: ["About Us", "Our Store", "Contact us"],
+  },
+  {
+    id: 2,
+    h1: "Career Opportunities",
+    item: ["Selling Programs", "Advertise", "Cooperation "],
+  },
+  {
+    id: 3,
+    h1: "How to Buy",
+    item: [
+      "Making Payments",
+      "Delivery Options",
+      "Buyer Protection",
+      "New User Guide",
+    ],
+  },
+  {
+    id: 4,
+    h1: "Help",
+    item: ["Contacts Us", "FAQ", "Privacy Policy"],
+  },
+];
 const Footer = () => {
   return (
-    <div>
-      <div className="footer">
-        <div>
-          <div className="relative items-center justify-center bg-[#D1E2EB] py-[7rem] lg:flex">
-            <div className="absolute -top-20 right-[490px] text-center sm:hidden md:hidden lg:flex">
-              <div className="rounded-2xl bg-[#7296AB] p-8">
+    <div className="footer h-[579px] w-[478px] mdd:h-[817px] mdd:w-fit lgg:h-[622px] lgg:w-[1440px] lgg:mt-[148px] mdd:mt-[148px] mt-0">
+      <div className="">
+        {/* h-fit w-fit mdd:h-[817px] mdd:w-[991px] lgg:h-[362px] lgg:w-[1440px] */}
+        <div className="relative w-full items-center justify-center bg-[#D1E2EB] grid grid-cols-2 pb-[60px] pl-[85.5px] pr-[30.5px] pt-[60px] mdd:grid mdd:h-fit mdd:w-full mdd:grid-cols-2 mdd:pb-[60px] mdd:pl-[303px] mdd:pr-[248px] mdd:pt-[132px] lgg:flex lgg:w-full lgg:pb-[60px] lgg:pl-0 lgg:pr-0 lgg:pt-[132px]">
+          <div className="absolute -top-20 right-0 hidden h-fit w-fit text-center mdd:right-[210px] mdd:flex mdd:h-[187px] mdd:w-[571px] lgg:right-auto lgg:flex lgg:h-[187px] lgg:w-[571px]">
+            <div className="w-full rounded-2xl bg-[#7296AB]">
+              <div className="mx-0 mt-0 mdd:mx-0 mdd:mt-0 lgg:mx-[56px] lgg:mt-[32px]">
                 <div className="font-lato text-[32px] font-bold text-white">
                   Luminae Store
                 </div>
+
                 <div className="font-lato text-[16px] text-white">
                   Register your email not to miss the last minutes off + Free
                   delivery
                 </div>
-                <div className="relative">
-                  <input
-                    type="text"
-                    placeholder="Enter your email"
-                    className="relative mt-5"
-                  />
-                  <div className="absolute right-1/3 top-1/2">
-                    <img src={thanhTimKiem} alt="thanhTimKiem" />
-                  </div>
-                </div>
               </div>
-            </div>
-            <div className="grid text-center sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4">
-              <div>
-                <div className="py-4 font-lato text-[14px] font-bold">
-                  Company
+              <div className="relative mx-0 mt-0 h-fit w-fit px-0 pb-0 pt-0 mdd:mx-[151.5px] mdd:mt-[24px] lgg:mx-0 lgg:mt-0 lgg:px-[151.5px] lgg:pb-[32px] lgg:pt-[24px]">
+                <input
+                  type="text"
+                  placeholder="Enter your email"
+                  className="relative text-[14px] mdd:h-[36px] mdd:w-[268px] lgg:h-[36px] lgg:w-[262px] lgg:pl-[12px]"
+                />
+                <div className="absolute right-0 top-0 mdd:right-[10px] mdd:top-[10px] lgg:right-[160px] lgg:top-[36px]">
+                  <img src={thanhTimKiem} alt="thanhTimKiem" />
                 </div>
-                <ul className="font-lato text-[14px]">
-                  <li>About Us</li>
-                  <li>Our Store</li>
-                  <li>Our Store</li>
-                </ul>
-              </div>
-              <div>
-                <div className="py-4 font-lato text-[14px] font-bold">
-                  Career Opportunities
-                </div>
-                <ul className="font-lato text-[14px]">
-                  <li>Selling Programs</li>
-                  <li>Advertise</li>
-                  <li>Cooperation opportunities</li>
-                </ul>
-              </div>
-
-              <div>
-                <div className="py-4 font-lato text-[14px] font-bold">
-                  How to Buy
-                </div>
-                <ul className="font-lato text-[14px]">
-                  <li>Making Payments</li>
-                  <li>Delivery Options</li>
-                  <li>Buyer Protection</li>
-                  <li>New User Guide</li>
-                </ul>
-              </div>
-
-              <div>
-                <div className="py-4 font-lato text-[14px] font-bold">Help</div>
-                <ul className="font-lato text-[14px]">
-                  <li>Contact Us</li>
-                  <li>FAQ</li>
-                  <li>Privacy Policy</li>
-                </ul>
               </div>
             </div>
           </div>
-        </div>
 
-        <div className="py-6">
-          <div className="visa flex">
+          {Foot.map((data) => (
+            <div
+              key={data.id}
+              className="mr-0 flex mdd:mr-0 mdd:pb-[60px] lgg:mr-[126px]"
+            >
+              <div>
+                <div className="font-lato text-[14px] font-bold pb-[25px] ">
+                  {data.h1}
+                </div>
+                <ul className="font-lato text-[14px]">
+                  {data.item.map((subItem, index) => (
+                    <div className="pb-[15px]" key={index}>
+                      {subItem}
+                    </div>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          ))}
+        </div>
+        <div className="h-[78px] w-[478px] mdd:h-[173px] mdd:w-[991px] lgg:h-[173px] lgg:w-[1440px]">
+          <div className="visa mx-[126.5px] my-[24px] lgg:my-0 mdd:my-0  flex justify-between pt-0 mdd:mx-[100px] mdd:pt-[24px] lgg:mx-[100px] lgg:pt-[24px] ">
             <div>
               <div>
                 <div>
-                  <div className="flex pl-16">
+                  <div className="flex">
                     <div>
                       <img src={Visa} alt="Visa" />
                     </div>
@@ -100,7 +106,7 @@ const Footer = () => {
               </div>
             </div>
 
-            <div className="pl-[810px]">
+            <div className="hidden md:block lg:block">
               <div className="flex items-center">
                 <div>English</div>
                 <div className="pl-2">
@@ -110,14 +116,16 @@ const Footer = () => {
             </div>
           </div>
 
-          <div>
-            <hr className="ml-16 mr-16 border-t-2 *:border-gray-400"></hr>
+          <div className="mx-0 my-0 hidden md:block mdd:mx-[100px] mdd:my-[12px] lg:block lgg:mx-[100px] lgg:my-[12px]">
+            <img src={divider} alt="divider" />
           </div>
-          <div className="flex items-center">
-            <div className="pl-16">
+          <div className="mx-0 mb-0 hidden items-center justify-between md:flex mdd:mx-[100px] mdd:mb-[24px] lg:flex lgg:mx-[100px] lgg:mb-[24px] lgg:h-[69px] lgg:w-[1240px]">
+            <div className="text-[14px]">
               165-179 Forster Road City of Monash, Melbourne, Australia
             </div>
-            <div className="pl-80">©2023 Copyright</div>
+            <div className="text-[14px]">
+              ©2023 Copyright in reserved for lumine shop
+            </div>
             <div className="ml-64 flex h-full items-center justify-center space-x-2 bg-white">
               <div>
                 <img src={iconIntergram} alt="intergram" />
