@@ -26,7 +26,7 @@ import telegram from "./image/header/Subtract.png";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-import ReponsiveMenu from "./ReponsiveMenu";
+import ResponsiveMenu from "./ResponsiveMenu";
 export const Nav = [
   {
     id: 1,
@@ -155,7 +155,7 @@ const Header = ({ showMenu, toggleMenu }) => {
                   <div className="absolute z-[9999] min-h-screen w-full">
                     <img onClick={toggleMenu} src={menuX} />
                     <div className="z-[9999]">
-                      <ReponsiveMenu />
+                      <ResponsiveMenu />
                     </div>
                   </div>
                 ) : (

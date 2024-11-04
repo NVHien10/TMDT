@@ -14,7 +14,7 @@ import PropTypes from "prop-types";
 // import { DropDownlink } from "./Header";
 // import { Nav } from "./Header";
 
-import ReponsiveMenu from "./ReponsiveMenu";
+import ResponsiveMenu from "./ResponsiveMenu";
 
 const NavHeader = ({ showMenu, toggleMenu }) => {
   return (
@@ -26,7 +26,7 @@ const NavHeader = ({ showMenu, toggleMenu }) => {
               <div className="absolute z-[9999] min-h-screen w-full pt-5">
                 <img onClick={toggleMenu} src={menuX} />
                 <div className="z-[9999]">
-                  <ReponsiveMenu />
+                  <ResponsiveMenu />
                 </div>
               </div>
             ) : (
