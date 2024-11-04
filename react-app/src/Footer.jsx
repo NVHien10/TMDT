@@ -7,7 +7,7 @@ import facebook from "./image/header/Vector 2998.png";
 import telegram from "./image/header/Subtract.png";
 import thanhTimKiem from "./image/footer/VectorTImKiem.png";
 import divider from "./image/footer/Divider.png";
-
+import PropTypes from "prop-types";
 const Foot = [
   {
     id: 1,
@@ -149,5 +149,7 @@ const Footer = ({ showMenu }) => {
     </div>
   );
 };
-
+Footer.propTypes = {
+  showMenu: PropTypes.bool.isRequired, // xác định kiểu bool và bắt buộc
+};
 export default Footer;

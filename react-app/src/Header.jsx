@@ -16,6 +16,7 @@ import iconblackCardNgoai from "./image/header/blackCard.png";
 import iconBlackCardTrong from "./image/header/blackCard_in.png";
 import line33 from "./image/frm/frm2/Line 121.png";
 import menuX from "./image/header/VectorX.png";
+import PropTypes from "prop-types";
 //import intergram1 from "./image/header/intergram1.png";
 // import intergram2 from "./image/header/intergram2.png";
 // import intergram3 from "./image/header/intergram3.png";
@@ -405,6 +406,12 @@ const Header = ({ showMenu, toggleMenu }) => {
     </div>
   );
 };
+Header.propTypes = {
+  showMenu: PropTypes.bool.isRequired, // xác định kiểu bool và bắt buộc
+};
 
+Header.propTypes = {
+  toggleMenu: PropTypes.bool.isRequired, // xác định kiểu bool và bắt buộc
+};
 // Xuất component Header để có thể import và sử dụng ở nơi khác
 export default Header;
