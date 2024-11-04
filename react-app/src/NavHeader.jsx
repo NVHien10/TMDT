@@ -1,4 +1,4 @@
-import logo from "./image/header/logo.png";
+import logo from "./image/header/Logo.png";
 import line from "./image/frm/frm2/Line 121.png";
 import iconblackCardNgoai from "./image/header/blackCard.png";
 import iconBlackCardTrong from "./image/header/blackCard_in.png";
