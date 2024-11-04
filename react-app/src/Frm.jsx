@@ -9,7 +9,7 @@ import Adv from "./Adv.jsx";
 import Adv2 from "./Adv2.jsx";
 import PropTypes from "prop-types";
 
-const Frm = () => {
+const Frm = ({ showMenu }) => {
   return (
     <div className="flex w-full flex-col">
       <div className="hidden w-full mdd:flex lgg:flex">
@@ -46,16 +46,22 @@ const Frm = () => {
         </div>
       </div>
 
-      <div className="order-3 order- lgg:order-1 mdd:order-1 ">
-        <FlashSale />
-        <Trending />
-        <Topp100 />
+      <div className="order- order-3 mdd:order-1 lgg:order-1">
+        {showMenu ? (
+          <div className="hidden"></div>
+        ) : (
+          <>
+            <FlashSale />
+            <Trending />
+            <Topp100 />
+          </>
+        )}
       </div>
 
-      <div className="order-1 lgg:order-2 mdd:order-2 ">
-        <Adv />
+      <div className="order-1 mdd:order-2 lgg:order-2">
+        {showMenu ? <div className="hidden"></div> : <Adv />}
       </div>
-      <div className="lgg:order-3 mdd:order-3  5 mt-16 hidden h-fit items-center justify-between bg-[#F7DDD0] mdd:flex mdd:h-[221px] mdd:w-[991px] lgg:flex lgg:h-[221px] lgg:w-[1440px]">
+      <div className="5 mt-16 hidden h-fit items-center justify-between bg-[#F7DDD0] mdd:order-3 mdd:flex mdd:h-[221px] mdd:w-[991px] lgg:order-3 lgg:flex lgg:h-[221px] lgg:w-[1440px]">
         <div className="pl-[90px]">
           <img src={reTrai} alt="reTrai" />
         </div>
@@ -78,8 +84,9 @@ const Frm = () => {
         </div>
       </div>
 
-      <div className="order-2 lgg:order-4 mdd:order-4">
-        <Adv2 />
+      <div className="order-2 mdd:order-4 lgg:order-4">
+        {showMenu ? <div className="hidden"></div> : <Adv2 />}
+       
       </div>
     </div>
   );

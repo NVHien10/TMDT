@@ -15,6 +15,7 @@ import line1 from "./image/header/Line 1.png";
 import iconblackCardNgoai from "./image/header/blackCard.png";
 import iconBlackCardTrong from "./image/header/blackCard_in.png";
 import line33 from "./image/frm/frm2/Line 121.png";
+import menuX from "./image/header/VectorX.png";
 //import intergram1 from "./image/header/intergram1.png";
 // import intergram2 from "./image/header/intergram2.png";
 // import intergram3 from "./image/header/intergram3.png";
@@ -23,6 +24,8 @@ import facebook from "./image/header/Vector 2998.png";
 import telegram from "./image/header/Subtract.png";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+
+import ReponsiveMenu from "./ReponsiveMenu";
 export const Nav = [
   {
     id: 1,
@@ -133,7 +136,7 @@ export const DropDownlink = [
   },
 ];
 
-const Header = () => {
+const Header = ({ showMenu, toggleMenu }) => {
   const [showElectronic, setShowElectronic] = useState(false);
   const handleClick = () => {
     setShowElectronic(!showElectronic);
@@ -146,35 +149,70 @@ const Header = () => {
         <div className="header1 block h-[96px] w-[478px] items-center justify-between bg-white mdd:w-[991px] mdd:justify-between mdd:px-[90px] lgg:flex lgg:w-[1440px] lgg:justify-between lgg:px-[90px]">
           <div className="block items-center justify-between mdd:flex lgg:flex">
             <div className="mx-[20px] mt-[32px] flex h-[27px] w-[438px] items-center justify-between mdd:mx-0 mdd:mt-0 mdd:h-fit mdd:w-fit lgg:mx-0 lgg:mt-0 lgg:h-fit lgg:w-fit">
-              <div className="flex items-center mdd:hidden lgg:hidden">
-                <div className="cursor-pointer">
-                  <img src={line33} alt="line" />
-                  <img src={line33} alt="line" className="py-0.5" />
-                  <img src={line33} alt="line" />
-                </div>
-              </div>
-              <div className="flex h-full items-center mdd:mt-3 lgg:col-span-2 lgg:mt-0">
-                <Link to="/">
-                  <img className="h-[33px] w-[49px]" src={logo} alt="logo" />
-                </Link>
-                <Link
-                  to="/"
-                  className="ml-[0.5rem] font-lato text-[32px] font-bold"
-                >
-                  Luminae
-                </Link>
-              </div>
-              <div className="flex items-center mdd:hidden lgg:hidden">
-                <div className="relative">
-                  <div className="absolute pl-[6.5px] pt-0.5">
-                    <img src={iconBlackCardTrong} alt="iconBlackCardTrong" />
+              <div>
+                {showMenu ? (
+                  <div className="absolute z-[9999] min-h-screen w-full">
+                    <img onClick={toggleMenu} src={menuX} />
+                    <div className="z-[9999]">
+                      <ReponsiveMenu />
+                    </div>
                   </div>
-                  <img src={iconblackCardNgoai} alt="iconblackCardNgoai" />
-                </div>
+                ) : (
+                  <div className="flex cursor-pointer items-center mdd:hidden lgg:hidden">
+                    <div
+                      className="cursor-pointer"
+                      onClick={() => toggleMenu()}
+                    >
+                      <img src={line33} alt="line" />
+                      <img src={line33} alt="line" className="py-0.5" />
+                      <img src={line33} alt="line" />
+                    </div>
+                  </div>
+                )}
+              </div>
 
-                <div className="ml-1 flex h-[1.5rem] w-[1.5rem] items-center justify-center rounded-full bg-green-500 text-[14px] font-bold text-white">
-                  3
-                </div>
+              <div className="flex h-full items-center mdd:mt-3 lgg:col-span-2 lgg:mt-0">
+                {showMenu ? (
+                  <div className="hidden"></div>
+                ) : (
+                  <>
+                    <Link to="/">
+                      <img
+                        className="h-[33px] w-[49px]"
+                        src={logo}
+                        alt="logo"
+                      />
+                    </Link>
+                    <Link
+                      to="/"
+                      className="ml-[0.5rem] font-lato text-[32px] font-bold"
+                    >
+                      Luminae
+                    </Link>
+                  </>
+                )}
+              </div>
+
+              <div className="flex items-center mdd:hidden lgg:hidden">
+                {showMenu ? (
+                  <div className="opacity-0"></div>
+                ) : (
+                  <>
+                    <div className="relative">
+                      <div className="absolute pl-[6.5px] pt-0.5">
+                        <img
+                          src={iconBlackCardTrong}
+                          alt="iconBlackCardTrong"
+                        />
+                      </div>
+                      <img src={iconblackCardNgoai} alt="iconblackCardNgoai" />
+                    </div>
+
+                    <div className="ml-1 flex h-[1.5rem] w-[1.5rem] items-center justify-center rounded-full bg-green-500 text-[14px] font-bold text-white">
+                      3
+                    </div>
+                  </>
+                )}
               </div>
             </div>
 

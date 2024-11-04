@@ -30,11 +30,8 @@ const NavHeader = ({ showMenu, toggleMenu }) => {
                 </div>
               </div>
             ) : (
-              <div className="mx-[2%] mt-3 flex items-center">
-                <div
-                  className="cursor-pointer py-0.5"
-                  onClick={() => toggleMenu()}
-                >
+              <div className="flex items-center mdd:hidden lgg:hidden">
+                <div className="cursor-pointer" onClick={() => toggleMenu()}>
                   <img src={line} alt="line" />
                   <img src={line} alt="line" className="py-0.5" />
                   <img src={line} alt="line" />
@@ -49,11 +46,7 @@ const NavHeader = ({ showMenu, toggleMenu }) => {
             ) : (
               <Link to="/" className="flex">
                 <div>
-                  <img
-                    className="h-[27px] w-[40px]"
-                    src={logo}
-                    alt="logo"
-                  />
+                  <img className="h-[27px] w-[40px]" src={logo} alt="logo" />
                 </div>
                 <div className="ml-[0.5rem] font-lato text-[22px] font-bold">
                   Luminae
