@@ -1,4 +1,4 @@
-import logo from "./image/header/logo.png";
+import logo from "./image/header/Logo.png";
 import iconMuiTem from "./image/header/Arrow.png";
 import timKiem from "./image/header/Vector.png";
 import Categorry from "./image/header/VectorCategorry.png";
