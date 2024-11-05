@@ -356,7 +356,7 @@ const Header = ({ showMenu, toggleMenu }) => {
         </div>
       </div>
 
-      <div className="hidden mdd:block lgg:block">
+      <div className="hidden mdd:inline lgg:block">
         <div className="z-[9999] mx-[90px] my-[16px] flex h-[52px] justify-between font-lato text-[14px]">
           {Nav.map((data) => (
             <div key={data.id} className={`group`}>

@@ -11,7 +11,7 @@ import PropTypes from "prop-types";
 
 const Frm = ({ showMenu }) => {
   return (
-    <div className="flex w-full flex-col">
+    <div className="mt-0 flex w-full flex-col mdd:mt-12 lgg:mt-0">
       <div className="hidden w-full mdd:flex lgg:flex">
         <div className="block mdd:w-[495px] lgg:w-[547px]">
           <img src={left} alt="left" />
