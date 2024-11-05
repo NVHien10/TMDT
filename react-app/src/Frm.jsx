@@ -1,5 +1,5 @@
 import left from "./image/frm/frm1/left.png";
-import reTrai from "./image/frm/frm2/vectorLeft.png";
+import reTrai from "./image/frm/frm2/VectorLeft.png";
 import rePhai from "./image/frm/frm2/VectorRight.png";
 import iphone from "./image/frm/frm2/Iphone.png";
 import FlashSale from "./FlashSales.jsx";
@@ -86,7 +86,6 @@ const Frm = ({ showMenu }) => {
 
       <div className="order-2 mdd:order-4 lgg:order-4">
         {showMenu ? <div className="hidden"></div> : <Adv2 />}
-       
       </div>
     </div>
   );
