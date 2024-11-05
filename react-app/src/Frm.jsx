@@ -91,6 +91,6 @@ const Frm = ({ showMenu }) => {
   );
 };
 Frm.propTypes = {
-  showMenu: PropTypes.bool.isRequired, // xác định kiểu bool và bắt buộc
+  showMenu: PropTypes.bool.isRequired, // xác định kiểu bool a và bắt buộc
 };
 export default Frm;
