@@ -217,29 +217,37 @@ const Header = ({ showMenu, toggleMenu }) => {
               </div>
             </div>
 
-            <div className="relative mx-[20px] mt-[48px] flex h-[54px] w-[438px] items-center rounded-md border-2 bg-white mdd:mx-0 mdd:ml-0 mdd:mt-0 mdd:h-[40px] mdd:w-[345px] lgg:mx-0 lgg:ml-[28.5px] lgg:mt-0 lgg:h-[40px] lgg:w-[345px]">
-              <div className="flex items-center pl-[12px] font-lato text-[14px]">
-                <input
-                  type="text"
-                  placeholder="Search Producs"
-                  className="indent-0.5 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-blue-500"
-                />
+            {showMenu ? (
+              <div className="hidden"></div>
+            ) : (
+              <>
+                <div className="relative mx-[20px] mt-[48px] flex h-[54px] w-[438px] items-center rounded-md border-2 bg-white mdd:mx-0 mdd:ml-0 mdd:mt-0 mdd:h-[40px] mdd:w-[345px] lgg:mx-0 lgg:ml-[28.5px] lgg:mt-0 lgg:h-[40px] lgg:w-[345px]">
+                  <div className="flex items-center pl-[12px] font-lato text-[14px]">
+                    <input
+                      type="text"
+                      placeholder="Search Producs"
+                      className="indent-0.5 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    />
 
-                <div className="flex items-center pl-[16px]">
-                  <div className="font-lato text-[14px]">All categories</div>
-                  <div>
-                    <img src={iconMuiTem} alt="iconMuiTem" />
+                    <div className="flex items-center pl-[16px]">
+                      <div className="font-lato text-[14px]">
+                        All categories
+                      </div>
+                      <div>
+                        <img src={iconMuiTem} alt="iconMuiTem" />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="absolute right-10 items-center pl-[0.5rem] text-gray-400">
+                    <img src={line} alt="line" />
+                  </div>
+                  <div className="absolute right-3 items-center">
+                    <img src={timKiem} alt="timKiem" />
                   </div>
                 </div>
-              </div>
-
-              <div className="absolute right-10 items-center pl-[0.5rem] text-gray-400">
-                <img src={line} alt="line" />
-              </div>
-              <div className="absolute right-3 items-center">
-                <img src={timKiem} alt="timKiem" />
-              </div>
-            </div>
+              </>
+            )}
           </div>
 
           <div className="mt-0 hidden justify-between mdd:mt-2 mdd:flex lgg:mt-0 lgg:flex">
