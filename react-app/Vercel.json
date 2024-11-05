@@ -1,13 +1,13 @@
 {
   "routes": [
     {
+      "src": "^/Electronic$",
+      "dest": "/Electronic"
+    },
+    {
       "src": "/(.*)",
 
       "dest": "/"
-    },
-    {
-      "src": "^/Electronic$",
-      "dest": "/Electronic"
     }
   ]
 }
