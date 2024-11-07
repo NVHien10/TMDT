@@ -1,10 +1,10 @@
-import muiTenBag from "./image/frm/frm2/Vector175_bag.png";
-import star from "./image/frm/frm2/Star 2.png";
-import ColonHaiCham from "./image/frm/frm2/ColonHaiCham.png";
-import bag from "./image/frm/frm2/photo bag.png";
-import Giay from "./image/frm/frm2/photoGiay.png";
-import bagHong from "./image/frm/frm2/photobagHong.png";
-import Sticker from "./image/frm/frm2/photoSticker.png";
+import muiTenBag from "../image/frm/frm2/Vector175_bag.png";
+import star from "../image/frm/frm2/Star 2.png";
+import ColonHaiCham from "../image/frm/frm2/ColonHaiCham.png";
+import bag from "../image/frm/frm2/photo bag.png";
+import Giay from "../image/frm/frm2/photoGiay.png";
+import bagHong from "../image/frm/frm2/photobagHong.png";
+import Sticker from "../image/frm/frm2/photoSticker.png";
 
 const FlashSale = [
   {

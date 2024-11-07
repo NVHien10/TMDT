@@ -1,10 +1,10 @@
-import star from "./image/frm/frm2/Star 2.png";
-import muiTenBag from "./image/frm/frm2/Vector175_bag.png";
-import iconTim from "./image/frm/frm2/VectorTim.png";
-import blackGirl from "./image/frm/frm2/photoCoGaiAoDen.png";
-import aoxanh from "./image/frm/frm2/aoxanh.png";
-import aoxanhrieu from "./image/frm/frm2/aoxanhrieu.png";
-import aoden from "./image/frm/frm2/aoden.png";
+import star from "../image/frm/frm2/Star 2.png";
+import muiTenBag from "../image/frm/frm2/Vector175_bag.png";
+import iconTim from "../image/frm/frm2/VectorTim.png";
+import blackGirl from "../image/frm/frm2/photoCoGaiAoDen.png";
+import aoxanh from "../image/frm/frm2/aoxanh.png";
+import aoxanhrieu from "../image/frm/frm2/aoxanhrieu.png";
+import aoden from "../image/frm/frm2/aoden.png";
 const Top100 = [
   {
     id: 1,
