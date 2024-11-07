@@ -1,9 +1,9 @@
-import { DropDownlink, Nav } from "./Header";
+import { DropDownlink, Nav } from "./components/Header";
 import muiTenBag from "./image/frm/frm2/Vector175_bag.png";
 import PropTypes from "prop-types";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import Footer from "./Footer";
+import Footer from "./components/Footer";
 
 const ReponsiveMenu = ({ showMenu }) => {
   const Foot = [

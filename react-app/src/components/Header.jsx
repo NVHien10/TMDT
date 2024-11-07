@@ -1,32 +1,32 @@
-import logo from "./image/header/Logo.png";
-import iconMuiTem from "./image/header/Arrow.png";
-import timKiem from "./image/header/Vector.png";
-import Categorry from "./image/header/VectorCategorry.png";
-import muiTen from "./image/header/Vector 175.png";
-import mencosmetic from "./image/header/Men cosmetic.png";
-import elip257 from "./image/header/Ellipse 257.png";
-import elip255 from "./image/header/Ellipse 255.png";
-import iconFavorites from "./image/header/VectorHeart.png";
-import iconCardNgoai from "./image/header/cardNgoai.png";
-import iconCardTrong from "./image/header/cardTrong.png";
-import headeraoxanh from "./image/header/header-aoxanh.png";
-import line from "./image/header/Line1.png";
-import line1 from "./image/header/Line 1.png";
-import iconblackCardNgoai from "./image/header/blackCard.png";
-import iconBlackCardTrong from "./image/header/blackCard_in.png";
-import line33 from "./image/frm/frm2/Line 121.png";
-import menuX from "./image/header/VectorX.png";
+import logo from "../image/header/Logo.png";
+import iconMuiTem from "../image/header/Arrow.png";
+import timKiem from "../image/header/Vector.png";
+import Categorry from "../image/header/VectorCategorry.png";
+import muiTen from "../image/header/Vector 175.png";
+import mencosmetic from "../image/header/Men cosmetic.png";
+import elip257 from "../image/header/Ellipse 257.png";
+import elip255 from "../image/header/Ellipse 255.png";
+import iconFavorites from "../image/header/VectorHeart.png";
+import iconCardNgoai from "../image/header/cardNgoai.png";
+import iconCardTrong from "../image/header/cardTrong.png";
+import headeraoxanh from "../image/header/header-aoxanh.png";
+import line from "../image/header/Line1.png";
+import line1 from "../image/header/Line 1.png";
+import iconblackCardNgoai from "../image/header/blackCard.png";
+import iconBlackCardTrong from "../image/header/blackCard_in.png";
+import line33 from "../image/frm/frm2/Line 121.png";
+import menuX from "../image/header/VectorX.png";
 import PropTypes from "prop-types";
 //import intergram1 from "./image/header/intergram1.png";
 // import intergram2 from "./image/header/intergram2.png";
 // import intergram3 from "./image/header/intergram3.png";
 // import intergram4 from "./image/header/intergram4.png";
-import facebook from "./image/header/Vector 2998.png";
-import telegram from "./image/header/Subtract.png";
+import facebook from "../image/header/Vector 2998.png";
+import telegram from "../image/header/Subtract.png";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-import ResponsiveMenu from "./ResponsiveMenu";
+import ResponsiveMenu from "../ResponsiveMenu";
 export const Nav = [
   {
     id: 1,

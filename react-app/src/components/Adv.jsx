@@ -1,5 +1,5 @@
-import coGaiAoDo from "./image/frm/frm2/Rectangle 1078.png";
-import coGaiAoTrang from "./image/frm/frm2/Rectangle.png";
+import coGaiAoDo from "../image/frm/frm2/Rectangle 1078.png";
+import coGaiAoTrang from "../image/frm/frm2/Rectangle.png";
 
 const Advv = [
   {

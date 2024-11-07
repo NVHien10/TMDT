@@ -1,13 +1,13 @@
 import Footer from "./Footer";
 import Header from "./Header";
-import star from "./image/frm/frm2/Star 2.png";
-import NavHeader from "./NavHeader";
+import star from "../image/frm/frm2/Star 2.png";
+import NavHeader from "../NavHeader";
 //import NoResult from "./image/electronic/noresult.png";
-import iconWarning from "./image/electronic/warning.png";
-import NoResultMin from "./image/electronic/noresultMin.png";
-import camera1 from "./image/electronic/camera.png";
-import camera2 from "./image/electronic/camera2.png";
-import camera3 from "./image/electronic/camera3.png";
+import iconWarning from "../image/electronic/warning.png";
+import NoResultMin from "../image/electronic/noresultMin.png";
+import camera1 from "../image/electronic/camera.png";
+import camera2 from "../image/electronic/camera2.png";
+import camera3 from "../image/electronic/camera3.png";
 const warn = [
   {
     id: 1,

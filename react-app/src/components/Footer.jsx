@@ -1,12 +1,12 @@
-import Visa from "./image/footer/imageVisa.png";
-import pre from "./image/footer/image-pre.png";
-import paypal from "./image/footer/LogoPaypal.png";
-import arrow from "./image/footer/Arrow.png";
-import iconIntergram from "./image/header/Vector 2998.png";
-import facebook from "./image/header/Vector 2998.png";
-import telegram from "./image/header/Subtract.png";
-import thanhTimKiem from "./image/footer/VectorTImKiem.png";
-import divider from "./image/footer/Divider.png";
+import Visa from "../image/footer/imageVisa.png";
+import pre from "../image/footer/image-pre.png";
+import paypal from "../image/footer/LogoPaypal.png";
+import arrow from "../image/footer/Arrow.png";
+import iconIntergram from "../image/header/Vector 2998.png";
+import facebook from "../image/header/Vector 2998.png";
+import telegram from "../image/header/Subtract.png";
+import thanhTimKiem from "../image/footer/VectorTImKiem.png";
+import divider from "../image/footer/Divider.png";
 import PropTypes from "prop-types";
 const Foot = [
   {
