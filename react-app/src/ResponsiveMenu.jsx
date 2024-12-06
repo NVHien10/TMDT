@@ -1,8 +1,7 @@
-import { DropDownlink, Nav } from "./components/Header";
+import { DropDownlink, Nav } from "./components/NavShow";
 import muiTenBag from "./image/frm/frm2/Vector175_bag.png";
 import PropTypes from "prop-types";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import Footer from "./components/Footer";
 
 const ReponsiveMenu = ({ showMenu }) => {
@@ -33,7 +32,7 @@ const ReponsiveMenu = ({ showMenu }) => {
   // const toggleElectronic = () => {
   //   setShowElectronic(!showElectronic);
   // };
-  const navigate = useNavigate();
+
   const handleClick = (id) => {
     switch (id) {
       case 1:
@@ -44,7 +43,6 @@ const ReponsiveMenu = ({ showMenu }) => {
         console.log("Action for Electronic");
         break;
       case 8:
-        navigate("/Electronic");
         break;
       default:
         console.log("Default action");
@@ -58,7 +56,7 @@ const ReponsiveMenu = ({ showMenu }) => {
           {Nav.map((data) => (
             <div key={data.id} className="bg-[#dddada] pl-[4%]">
               <a
-                href={data.linkx}
+                href={data.link}
                 onClick={() => handleClick(data.id)}
                 className={`${showWoman && data.id === 1 ? "pb-4 text-orange-500" : ""} cursor-pointer`}
               >

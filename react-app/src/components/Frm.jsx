@@ -8,8 +8,10 @@ import Topp100 from "../components/Topp100.jsx";
 import Adv from "./Adv.jsx";
 import Adv2 from "./Adv2.jsx";
 import PropTypes from "prop-types";
+import TopTram from "./TopTram.jsx";
 
 const Frm = ({ showMenu }) => {
+  
   return (
     <div className="mt-0 flex w-full flex-col mdd:mt-12 lgg:mt-0">
       <div className="hidden w-full mdd:flex lgg:flex">
@@ -53,6 +55,7 @@ const Frm = ({ showMenu }) => {
           <>
             <FlashSale />
             <Trending />
+            <TopTram/>
             <Topp100 />
           </>
         )}

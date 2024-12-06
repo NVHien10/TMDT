@@ -9,7 +9,7 @@ import elip255 from "../image/header/Ellipse 255.png";
 import iconFavorites from "../image/header/VectorHeart.png";
 import iconCardNgoai from "../image/header/cardNgoai.png";
 import iconCardTrong from "../image/header/cardTrong.png";
-import headeraoxanh from "../image/header/header-aoxanh.png";
+
 import line from "../image/header/Line1.png";
 import line1 from "../image/header/Line 1.png";
 import iconblackCardNgoai from "../image/header/blackCard.png";
@@ -27,125 +27,18 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 import ResponsiveMenu from "../ResponsiveMenu";
-export const Nav = [
-  {
-    id: 1,
-    name: "Woman",
-    link: "#",
-  },
-  {
-    id: 2,
-    name: "Male",
-    link: "#",
-  },
-  {
-    id: 3,
-    name: "Mother-Child",
-    link: "#",
-  },
-  {
-    id: 4,
-    name: "Home & Furniture",
-    link: "#",
-  },
-  {
-    id: 5,
-    name: "Super market",
-    link: "#",
-  },
-  {
-    id: 6,
-    name: "Cosmetics",
-    link: "#",
-  },
-  {
-    id: 7,
-    name: "Shoe & Bag",
-    link: "https://www.google.com.vn/",
-  },
-  {
-    id: 8,
-    name: "Electronic",
-    link: "/electronic",
-    // link: "https://www.google.com.vn/",
-  },
-  {
-    id: 9,
-    name: "Sport & Outdoor",
-    link: "#",
-  },
-  {
-    id: 10,
-    name: "Best seller",
-    link: "#",
-  },
-];
-export const DropDownlink = [
-  {
-    id: 1,
-    h1: "Shoe & Bag",
-    link: "#",
-    item: ["Casual Shoes", "Boots", "Sandals", "Slippers"],
-  },
-  {
-    id: 2,
-    h1: "Home Textile",
-    link: "#",
-    item: ["Bedding", "Pillows", "Handkerchief Towels", "Curtain"],
-  },
-  {
-    id: 3,
-    h1: "Party Supplies",
-    link: "#",
-    item: ["Event & Party", "Christmas", "Artificial Decorations", "Wedding"],
-  },
-  {
-    id: 4,
-    h1: "Luxury & designer",
-    link: "#",
-    item: ["Casual Shoes", "Boots", "Sandals", "Slippers"],
-  },
-  {
-    id: 5,
-    h1: "Cosmetics",
-    link: "#",
-    item: ["Casual Shoes", "Boots", "Sandals", "Slippers"],
-  },
-  {
-    id: 6,
-    h1: "Sport & Outdoors",
-    link: "#",
-    item: ["Casual Shoes", "Boots", "Sandals", "Slippers"],
-  },
-  {
-    id: 7,
-    h1: "Clothes",
-    link: "#",
-    item: [
-      "Bottoms",
-      "Women's Clothing",
-      "T-Shirts and Tops",
-      "Dresses",
-      "Outerwear",
-      "Formal Wear",
-      "Casual Wear",
-      "Seasonal Collections",
-      "Sports Bras",
-      "Workout Tops",
-      "Fall Wardrobe",
-    ],
-  },
-];
+import AllCategory from "./AllCategory";
 
-const Header = ({ showMenu, toggleMenu }) => {
-  const [showElectronic, setShowElectronic] = useState(false);
-  const handleClick = () => {
-    setShowElectronic(!showElectronic);
-    console.log("bb");
-    // Cập nhật state để hiển thị component
+const Header = ({ showMenu, toggleMenu, cart }) => {
+  const [showCategories, setshowCategories] = useState(false);
+
+  const toggleCategories = () => {
+    setshowCategories(!showCategories);
+
+    console.log("setshowCategories");
   };
   return (
-    <div className="h-[164px] w-full lgg:h-[254px]">
+    <div className="h-[164px] w-full lgg:h-[202px]">
       <div className="h-[164px] w-full lgg:h-[202px]">
         <div className="header1 block h-[96px] w-[478px] items-center justify-between bg-white mdd:w-[991px] mdd:justify-between mdd:px-[90px] lgg:flex lgg:w-[1440px] lgg:justify-between lgg:px-[90px]">
           <div className="block items-center justify-between mdd:flex lgg:flex">
@@ -230,13 +123,29 @@ const Header = ({ showMenu, toggleMenu }) => {
                     />
 
                     <div className="flex items-center pl-[16px]">
-                      <div className="font-lato text-[14px]">
+                      <a
+                        href="/CategoryShow"
+                        onClick={toggleCategories}
+                        className="cursor-pointer font-lato text-[14px]"
+                      >
                         All categories
-                      </div>
+                      </a>
                       <div>
-                        <img src={iconMuiTem} alt="iconMuiTem" />
+                        <img
+                          src={iconMuiTem}
+                          alt="iconMuiTem"
+                          className="cursor-pointer"
+                        />
                       </div>
                     </div>
+
+                    {showCategories && (
+                      <>
+                        <div className="-top-28 absolute z-[9999]">
+                          <AllCategory />
+                        </div>
+                      </>
+                    )}
                   </div>
 
                   <div className="absolute right-10 items-center pl-[0.5rem] text-gray-400">
@@ -272,14 +181,18 @@ const Header = ({ showMenu, toggleMenu }) => {
         </div>
 
         <div className="header2 mdd:[991px] hidden h-[40px] items-center justify-between bg-black px-[90px] mdd:flex lgg:flex lgg:h-[78px] lgg:w-[1440px]">
-          <div className="flex items-center">
+          <a
+            href="/CategoryShow"
+            className="flex cursor-pointer items-center"
+            onClick={toggleCategories}
+          >
             <div className="">
               <img src={Categorry} alt="Categorry" />
             </div>
             <div className="items-center pl-[4px] font-lato text-[20px] font-bold text-white">
               Categories
             </div>
-          </div>
+          </a>
 
           <div className="grid grid-cols-2">
             <div className="flex items-center">
@@ -342,7 +255,7 @@ const Header = ({ showMenu, toggleMenu }) => {
               </div>
             </div>
 
-            <div className="flex items-center">
+            <Link to="/ShowCart" className="flex items-center">
               <div className="flex">
                 <div className="relative">
                   <div className="absolute pl-1.5 pt-0.5">
@@ -357,58 +270,10 @@ const Header = ({ showMenu, toggleMenu }) => {
               </div>
 
               <div className="ml-[8px] flex h-[1.5rem] w-[1.5rem] items-center justify-center rounded-full bg-green-500 text-[14px] font-bold text-white">
-                3
+                {(cart || []).length === 0 ? "0" : cart.length}
               </div>
-            </div>
+            </Link>
           </div>
-        </div>
-      </div>
-
-      <div className="hidden mdd:inline lgg:block">
-        <div className="z-[9999] mx-[90px] my-[16px] flex h-[52px] justify-between font-lato text-[14px]">
-          {Nav.map((data) => (
-            <div key={data.id} className={`group`}>
-              <a onClick={handleClick} href={data.link}>
-                {data.name}
-              </a>
-              <div
-                className={`${data.id === 1 ? "group-hover:flex" : "hidden"} absolute z-50 hidden bg-white pr-6 pt-5`}
-              >
-                <ul className="grid grid-cols-4 gap-6 px-6 pb-2">
-                  {DropDownlink.map((data) => (
-                    <li className="pt-2" key={data.id}>
-                      <a
-                        className="font-lato font-bold uppercase hover:text-blue-400"
-                        href={data.link}
-                      >
-                        {data.h1}
-                      </a>
-
-                      <div className="pt-1 hover:text-blue-400">
-                        {data.item.map((subItem, index) => (
-                          <a
-                            key={index} // Sử dụng index làm key vì item không có id riêng
-                            className="block hover:text-blue-400"
-                            href="#"
-                          >
-                            {subItem}
-                          </a>
-                        ))}
-                      </div>
-                    </li>
-                  ))}
-                </ul>
-
-                <div className="hidden lg:block">
-                  <img
-                    className="my-4 h-fit w-[275px] pl-6"
-                    src={headeraoxanh}
-                    alt="headeraoxanh"
-                  />
-                </div>
-              </div>
-            </div>
-          ))}
         </div>
       </div>
     </div>
@@ -416,10 +281,14 @@ const Header = ({ showMenu, toggleMenu }) => {
 };
 Header.propTypes = {
   showMenu: PropTypes.bool.isRequired, // xác định kiểu bool và bắt buộc
-};
-
-Header.propTypes = {
+  cart: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      name: PropTypes.string.isRequired,
+      quantity: PropTypes.number.isRequired,
+    }),
+  ).isRequired, // Prop `cart` là bắt buộc
   toggleMenu: PropTypes.bool.isRequired, // xác định kiểu bool và bắt buộc
 };
-// Xuất component Header để có thể import và sử dụng ở nơi khác
+
 export default Header;
