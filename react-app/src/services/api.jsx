@@ -28,14 +28,14 @@ export const fetchProductById = async (id) => {
   }
 };
 
-//lấy thông tin sản phẩm theo category
-export const fetchProductByCategory = async (category) => {
-  try {
-    const response = await axios.get(`${BASE_URL}/products/${category}`);
-    return response.data;
-  } catch (error) {
-    console.error("Error fetching product by category:", error);
-    throw error;
-  }
-};
+// //lấy thông tin sản phẩm theo category
+// export const fetchProductByCategory = async (category) => {
+//   try {
+//     const response = await axios.get(`${BASE_URL}/products/${category}`);
+//     return response.data;
+//   } catch (error) {
+//     console.error("Error fetching product by category:", error);
+//     throw error;
+//   }
+// };
 
