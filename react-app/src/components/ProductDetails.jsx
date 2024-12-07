@@ -13,7 +13,7 @@ import Details from "./Details";
 import Reviews from "./Reviews";
 import Shipping from "./Shipping";
 
-import muitenphai from "../image/header/muitenphai.png";
+import muitenphai from "../image/header/MuiTenPhai.png";
 import disabled from "../image/frm/ProductDetails/disabled.png";
 import Minus from "../image/frm/ProductDetails/Minus.png";
 import Plus from "../image/frm/ProductDetails/Plus.png";
