@@ -10,7 +10,7 @@ import iconTim from "../image/frm/frm2/VectorTim.png";
 import iconTimDo from "../image/frm/frm2/timdo.png";
 import CategoryList from "./CategoryList";
 
-import muitenphai from "../image/header/muitenphai.png";
+import muitenphai from "../image/header/MuiTenPhai.png";
 import muitenxuong from "../image/header/muitenxuong.png";
 
 import AllCategory from "./AllCategory";
