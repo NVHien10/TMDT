@@ -1,5 +1,6 @@
 import headeraoxanh from "../image/header/header-aoxanh.png";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export const Nav = [
   {
@@ -122,31 +123,31 @@ const NavShow = () => {
       <div className="z-[9999] mx-[90px] my-[16px] flex h-[52px] justify-between font-lato text-[14px]">
         {Nav.map((data) => (
           <div key={data.id} className={`group`}>
-            <a onClick={handleClick} href={data.link}>
+            <Link onClick={handleClick} to={data.link}>
               {data.name}
-            </a>
+            </Link>
             <div
               className={`${data.id === 1 ? "group-hover:flex" : "hidden"} absolute z-50 hidden bg-white pr-6 pt-5`}
             >
               <ul className="grid grid-cols-4 gap-6 px-6 pb-2">
                 {DropDownlink.map((data) => (
                   <li className="pt-2" key={data.id}>
-                    <a
+                    <Link
                       className="font-lato font-bold uppercase hover:text-blue-400"
-                      href={data.link}
+                      to={data.link}
                     >
                       {data.h1}
-                    </a>
+                    </Link>
 
                     <div className="pt-1 hover:text-blue-400">
                       {data.item.map((subItem, index) => (
-                        <a
-                          key={index} // Sử dụng index làm key vì item không có id riêng
+                        <Link
+                          key={index} // Sử dụng index làm key nếu không có id
                           className="block hover:text-blue-400"
-                          href="#"
+                          to="#" // Thay thế với đường dẫn cụ thể
                         >
                           {subItem}
-                        </a>
+                        </Link>
                       ))}
                     </div>
                   </li>
