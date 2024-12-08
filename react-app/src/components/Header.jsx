@@ -43,6 +43,9 @@ const Header = ({ showMenu, toggleMenu, cart }) => {
     window.addEventListener("scroll", handleScroll);
 
     // Dọn dẹp sự kiện khi component unmount
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
   const [showCategories, setshowCategories] = useState(false);
