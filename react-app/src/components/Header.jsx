@@ -140,7 +140,7 @@ const Header = ({ showMenu, toggleMenu, cart }) => {
 
                     {showCategories && (
                       <>
-                        <div className="-top-28 absolute z-[9999]">
+                        <div className="absolute -top-28 z-[9999]">
                           <AllCategory />
                         </div>
                       </>
@@ -180,8 +180,8 @@ const Header = ({ showMenu, toggleMenu, cart }) => {
         </div>
 
         <div className="header2 mdd:[991px] hidden h-[40px] items-center justify-between bg-black px-[90px] mdd:flex lgg:flex lgg:h-[78px] lgg:w-[1440px]">
-          <a
-            href="/CategoryShow"
+          <Link
+            to="/CategoryShow"
             className="flex cursor-pointer items-center"
             onClick={toggleCategories}
           >
@@ -191,7 +191,7 @@ const Header = ({ showMenu, toggleMenu, cart }) => {
             <div className="items-center pl-[4px] font-lato text-[20px] font-bold text-white">
               Categories
             </div>
-          </a>
+          </Link>
 
           <div className="grid grid-cols-2">
             <div className="flex items-center">
