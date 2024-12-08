@@ -63,7 +63,7 @@ const CategoryShow = () => {
     loadProducts();
   }, [loadProducts]);
 
-  const [allCategoryClick, setAllCategoryClick] = useState(false);
+  const [allCategoryClick, setAllCategoryClick] = useState(true);
   const toggleAllCategoryClick = () => {
     setAllCategoryClick(!allCategoryClick);
     console(console.log("55"));
