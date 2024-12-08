@@ -1,7 +1,6 @@
 import headeraoxanh from "../image/header/header-aoxanh.png";
 import { useState } from "react";
 
-
 export const Nav = [
   {
     id: 1,
@@ -120,7 +119,6 @@ const NavShow = () => {
 
   return (
     <div className="hidden mdd:inline lgg:block">
-    
       <div className="z-[9999] mx-[90px] my-[16px] flex h-[52px] justify-between font-lato text-[14px]">
         {Nav.map((data) => (
           <div key={data.id} className={`group`}>
