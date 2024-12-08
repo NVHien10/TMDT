@@ -4,7 +4,7 @@ import rePhai from "../image/frm/frm2/VectorRight.png";
 import iphone from "../image/frm/frm2/Iphone.png";
 import FlashSale from "../components/FlashSales.jsx";
 import Trending from "../components/Trending.jsx";
-import Topp100 from "../components/Topp100.jsx";
+//import Topp100 from "../components/Topp100.jsx";
 import Adv from "./Adv.jsx";
 import Adv2 from "./Adv2.jsx";
 import PropTypes from "prop-types";
@@ -56,7 +56,7 @@ const Frm = ({ showMenu }) => {
             <FlashSale />
             <Trending />
             <TopTram/>
-            <Topp100 />
+         
           </>
         )}
       </div>
