@@ -11,22 +11,22 @@ const Model = [
   {
     id: 2,
     name: "Mid-length ",
-    number: 60,
+    number: 10,
   },
   {
     id: 3,
     name: "Sweather",
-    number: 60,
+    number: 56,
   },
   {
     id: 4,
     name: "Party Dresses",
-    number: 60,
+    number: 80,
   },
   {
     id: 5,
     name: "Regular Fit",
-    number: 60,
+    number: 100,
   },
 ];
 const Style = [
@@ -160,9 +160,7 @@ const AllCategory = ({ allCategoryClick, toggleAllCategoryClick }) => {
           <div>
             <img src={allcategories} alt="allcategories" />
           </div>
-          <div
-            className="ml-[16px] font-lato text-[16px] font-extrabold" 
-          >
+          <div className="ml-[16px] font-lato text-[16px] font-extrabold">
             All Categories
           </div>
         </div>
