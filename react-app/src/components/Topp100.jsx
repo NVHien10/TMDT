@@ -8,9 +8,9 @@ import aoxanhrieu from "../image/frm/frm2/aoxanhrieu.png";
 import aoden from "../image/frm/frm2/aoden.png";
 import { useState, useEffect, useCallback } from "react";
 
-import { Link } from "react-router-dom";
+//import { Link } from "react-router-dom";
 import { fetchProducts } from "../services/api";
-import CategoryList from "./CategoryList";
+//import CategoryList from "./CategoryList";
 
 const Top100 = [
   {
@@ -80,7 +80,7 @@ const Topp100 = () => {
 
   return (
     <div className="mt-[48px] w-fit mdd:mt-[68px] mdd:w-[991px] lgg:mt-[68px] lgg:w-[1440px]">
-      <div className="container mx-auto mt-10 p-4">
+      {/* <div className="container mx-auto mt-10 p-4">
         <Link to="/" className="mr-4 text-blue-500 hover:underline">
           Product List
         </Link>
@@ -90,10 +90,10 @@ const Topp100 = () => {
       </div>
       <div>
         <CategoryList setCategoryFilter={setCategoryFilter} />
-      </div>
+      </div> */}
       <div className="phan1 mx-[20px] mr-[20px] flex justify-between mdd:mx-[90px] lgg:mx-[90px] lgg:mb-[0px]">
         <div className="font-lato text-[20px] font-medium md:text-[28px] lg:text-[28px]">
-          Top 100
+          Top Category
         </div>
         <div className="flex items-center">
           <div className="pr-2 font-lato text-[12px]">View all</div>
@@ -126,15 +126,16 @@ const Topp100 = () => {
                     {data.category}
                   </div>
                 </div>
-                <div onClick={() =>toggleTim(data.id)} className="cursor-pointer">
+                <div
+                  onClick={() => toggleTim(data.id)}
+                  className="cursor-pointer"
+                >
                   {tim[data.id] ? (
                     <img src={iconTimDo} alt="iconTimDo" />
                   ) : (
                     <img src={iconTim} alt="iconTim" />
                   )}
                 </div>
-
-              
               </div>
               <div className="mx-[20px] my-[12px] flex h-0 items-center mdd:mx-[20px] mdd:my-[12px] mdd:h-[25px] lgg:mx-[20px] lgg:h-[24px] lgg:py-[12px]">
                 <div className="start flex">
