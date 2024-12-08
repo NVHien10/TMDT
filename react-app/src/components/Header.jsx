@@ -32,7 +32,7 @@ const Header = ({ showMenu, toggleMenu, cart }) => {
   const [isSticky, setIsSticky] = useState(false);
 
   const handleScroll = () => {
-    if (window.scrollY > 100) {
+    if (window.scrollY > 150) {
       setIsSticky(true); // Kích hoạt trạng thái cố định
     } else {
       setIsSticky(false); // Gỡ trạng thái cố định
