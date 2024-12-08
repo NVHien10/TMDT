@@ -145,13 +145,13 @@ const Header = ({ showMenu, toggleMenu, cart }) => {
                       />
 
                       <div className="flex items-center pl-[16px]">
-                        <a
-                          href="/CategoryShow"
+                        <Link
+                          to="/CategoryShow"
                           onClick={toggleCategories}
                           className="cursor-pointer font-lato text-[14px]"
                         >
                           All categories
-                        </a>
+                        </Link>
                         <div>
                           <img
                             src={iconMuiTem}
