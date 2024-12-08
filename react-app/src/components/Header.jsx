@@ -32,7 +32,7 @@ const Header = ({ showMenu, toggleMenu, cart }) => {
   const [isSticky, setIsSticky] = useState(false);
 
   const handleScroll = () => {
-    if (window.scrollY > 150) {
+    if (window.scrollY > 200) {
       setIsSticky(true); // Kích hoạt trạng thái cố định
     } else {
       setIsSticky(false); // Gỡ trạng thái cố định
@@ -43,9 +43,6 @@ const Header = ({ showMenu, toggleMenu, cart }) => {
     window.addEventListener("scroll", handleScroll);
 
     // Dọn dẹp sự kiện khi component unmount
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
   }, []);
 
   const [showCategories, setshowCategories] = useState(false);
