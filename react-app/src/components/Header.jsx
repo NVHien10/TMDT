@@ -106,7 +106,10 @@ const Header = ({ showMenu, toggleMenu, cart }) => {
                   )}
                 </div>
 
-                <div className="flex items-center mdd:hidden lgg:hidden">
+                <Link
+                  to="/ShowCart"
+                  className="flex items-center mdd:hidden lgg:hidden"
+                >
                   {showMenu ? (
                     <div className="opacity-0"></div>
                   ) : (
@@ -125,11 +128,11 @@ const Header = ({ showMenu, toggleMenu, cart }) => {
                       </div>
 
                       <div className="ml-1 flex h-[1.5rem] w-[1.5rem] items-center justify-center rounded-full bg-green-500 text-[14px] font-bold text-white">
-                        3
+                        {(cart || []).length === 0 ? "0" : cart.length}
                       </div>
                     </>
                   )}
-                </div>
+                </Link>
               </div>
 
               {showMenu ? (

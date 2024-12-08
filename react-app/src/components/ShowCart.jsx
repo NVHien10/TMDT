@@ -73,8 +73,8 @@ const ShowCart = () => {
         <Header cart={cart} />
       </div>
 
-      <div className="mx-[90px] mt-10 flex justify-between">
-        <div className="h-[320px] w-[851px]">
+      <div className="mx-5 mt-10 block justify-between mdd:mx-[90px] mdd:flex lgg:mx-[90px] lgg:flex">
+        <div className="h-fit w-[438px] lgg:h-fit lgg:w-[851px]">
           <div className="flex items-center">
             <div className="font-lato text-[20px] font-bold">Cart</div>
             <div className="ml-1 font-lato text-[18px] text-[#9D9D9D]">
@@ -90,57 +90,61 @@ const ShowCart = () => {
                 {cart.map((item) => (
                   <div
                     key={item.id}
-                    className="flex h-[70px] items-center justify-between"
+                    className="mt-8 items-center mdd:mt-8 mdd:block mdd:h-[126px] lgg:mt-6 lgg:flex lgg:h-[70px]"
                   >
-                    <div className="flex w-[282px] items-center">
-                      <img
-                        src={item.image}
-                        alt={item.title}
-                        className="mr-4 h-16 w-16"
-                      />
+                    <div className="flex w-[427px] items-center justify-between mdd:h-10 lgg:h-[70px]">
+                      <div className="flex w-[282px] items-center">
+                        <img
+                          src={item.image}
+                          alt={item.title}
+                          className="mr-4 h-16 w-16"
+                        />
 
-                      <div>
-                        <h3 className="font-lato text-[14px] font-bold">
-                          {item.title.slice(0, 20)},
-                        </h3>
+                        <div>
+                          <h3 className="font-lato text-[14px] font-bold">
+                            {item.title.slice(0, 20)},
+                          </h3>
 
-                        <div className="flex items-center">
-                          <div className="mr-1 font-lato text-[14px] text-[#555555]">
-                            Color:
+                          <div className="flex items-center">
+                            <div className="mr-1 font-lato text-[14px] text-[#555555]">
+                              Color:
+                            </div>
+                            <div className="border-9 h-[12px] w-[12px] rounded-full border bg-yellow-400"></div>
                           </div>
-                          <div className="border-9 h-[12px] w-[12px] rounded-full border bg-yellow-400"></div>
                         </div>
+                      </div>
+
+                      <div className="w-[60px] font-lato text-[14px] text-[#555555]">
+                        ${item.price.toFixed(2)}
                       </div>
                     </div>
 
-                    <div className="w-[60px] font-lato text-[14px] text-[#555555]">
-                      ${item.price.toFixed(2)}
-                    </div>
+                    <div className="mx-0 mt-4 flex h-10 w-[424px] items-center justify-between mdd:mx-0 mdd:mt-4 mdd:h-[40px] lgg:ml-20 lgg:mt-0 lgg:h-[70px]">
+                      <div className="flex items-center space-x-2 rounded-md border-2 px-[10px] py-[6px]">
+                        <button
+                          className="text-[22px] text-[#C4C4C4]"
+                          onClick={() => decreaseQuantity(item)} // Giảm số lượng
+                        >
+                          <img src={Minus} alt="Minus" />
+                        </button>
+                        <p className="font-lato text-[14px] font-bold">
+                          {item.quantity}
+                        </p>
+                        <button
+                          className="text-[22px] text-[#C4C4C4]"
+                          onClick={() => increaseQuantity(item)} // Tăng số lượng
+                        >
+                          <img src={blackPlus} alt="blackPlus" />
+                        </button>
+                      </div>
 
-                    <div className="flex items-center space-x-2 rounded-md border-2 px-[10px] py-[10px]">
-                      <button
-                        className="text-[22px] text-[#C4C4C4]"
-                        onClick={() => decreaseQuantity(item)} // Giảm số lượng
-                      >
-                        <img src={Minus} alt="Minus" />
-                      </button>
-                      <p className="font-lato text-[14px] font-bold">
-                        {item.quantity}
-                      </p>
-                      <button
-                        className="text-[22px] text-[#C4C4C4]"
-                        onClick={() => increaseQuantity(item)} // Tăng số lượng
-                      >
-                        <img src={blackPlus} alt="blackPlus" />
+                      <div className="w-[60px]">
+                        {(item.quantity * item.price).toFixed(2)}
+                      </div>
+                      <button onClick={() => deletee(item)}>
+                        <img src={thungRac} alt="thungRac" />
                       </button>
                     </div>
-
-                    <div className="w-[60px]">
-                      {(item.quantity * item.price).toFixed(2)}
-                    </div>
-                    <button onClick={() => deletee(item)}>
-                      <img src={thungRac} alt="thungRac" />
-                    </button>
                   </div>
                 ))}
               </div>
@@ -148,8 +152,8 @@ const ShowCart = () => {
           </div>
         </div>
 
-        <div className="h-[389px] w-[309px] bg-[#E9E9E9]">
-          <div className="mx-10 mt-5">
+        <div className="mt-[62px] h-[389px] items-center bg-[#E9E9E9] px-[64.5px] mdd:mt-0 mdd:h-[389px] mdd:w-[309px] mdd:px-0 lgg:mt-0 lgg:h-[409px] lgg:w-[309px] lgg:px-0">
+          <div className="mdd:[228px] lgg:[229px] mx-10 w-[229px] pt-5">
             <div className="font-lato text-[16px] font-bold">Order Summary</div>
             <div className="mt-3 flex items-center justify-between font-lato text-[14px] text-[#555555]">
               <div>Price</div>
@@ -220,24 +224,24 @@ const ShowCart = () => {
         </div>
       </div>
 
-      <div className="mx-[90px] mt-6 flex h-[48px] items-center justify-end">
-        <div className="h-[48px] w-[197px] rounded-md border-2 pt-4 text-center font-lato text-[12px] font-semibold">
+      <div className="mx-5 mt-6 flex h-[48px] items-center justify-between mdd:mx-[90px] mdd:justify-end lgg:mx-[90px] lgg:justify-end">
+        <div className="h-[48px] w-[219px] rounded-md border-2 pt-4 text-center font-lato text-[12px] font-semibold mdd:w-[197px] lgg:w-[197px]">
           Enter coupon code
         </div>
-        <div className="h-[48px] w-[111px] rounded-md bg-black pt-2 text-center font-lato text-[12px] font-semibold text-white">
+        <div className="h-[48px] w-[219px] rounded-md bg-black pt-2 text-center font-lato text-[12px] font-semibold text-white mdd:w-[111px] lgg:w-[111px]">
           Login and Apply code
         </div>
       </div>
 
       <div className="">
-        <div className="mx-[90px] mt-6 flex items-center justify-between">
+        <div className="mx-5 mt-6 flex items-center justify-between mdd:mx-[90px] lgg:mx-[90px]">
           <p className="font-lato text-[14px] font-bold">You might also like</p>
           <div>
             <img src={leftright} alt="leftright" />
           </div>
         </div>
 
-        <div className="mx-[90px] mt-3 grid grid-cols-4">
+        <div className="mx-5 mt-3 grid grid-cols-1 mdd:mx-[90px] mdd:grid mdd:grid-cols-2 mdd:gap-x-52 lgg:mx-[90px] lgg:grid lgg:grid-cols-4 lgg:gap-x-0">
           {[
             ...new Set(cart.map((item) => item.category)), // Lấy danh sách category duy nhất từ cart
           ].map(
