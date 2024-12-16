@@ -16,7 +16,8 @@ import leftright from "../image/frm/ProductDetails/leftright.png";
 const ShowCart = () => {
   const [tong, setTong] = useState(0);
 
-  const { cart, addToCart, removeFromCart } = useContext(CartContext);
+  const { cart, addToCart, removeFromCart, removeItem } =
+    useContext(CartContext);
 
   const [loading, setLoading] = useState(true);
 
@@ -61,7 +62,7 @@ const ShowCart = () => {
   //delete
   const deletee = (item) => {
     if (item.quantity > 0) {
-      removeFromCart(item);
+      removeItem(item);
     }
   };
   // Tính tổng giá trị giỏ hàng
@@ -208,7 +209,8 @@ const ShowCart = () => {
             <div className="mt-3 flex items-center justify-between">
               <div className="font-lato text-[14px] font-bold">Total Price</div>
               <div className="font-lato text-[14px] font-bold">
-                $ {tong ? total + 10.9 : total}
+                ${tong ? (total + 10.9).toFixed(2) : total.toFixed(2)}
+            
               </div>
             </div>
 

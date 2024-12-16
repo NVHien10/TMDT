@@ -1,4 +1,4 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useState, useEffect } from "react";
 
 // Tạo Context cho giỏ hàng
 export const CartContext = createContext();
@@ -9,9 +9,27 @@ export const useCart = () => {
 };
 
 export const CartProvider = ({ children }) => {
-  const [cart, setCart] = useState([]);
+  // Khởi tạo cart từ localStorage hoặc mảng trống
+  const [cart, setCart] = useState(() => {
+    try {
+      const savedCart = localStorage.getItem("cart");
+      return savedCart ? JSON.parse(savedCart) : [];
+    } catch (error) {
+      console.error("Error parsing cart from localStorage:", error);
+      return [];
+    }
+  });
 
-  // Hàm thêm sản phẩm vào giỏ
+  // Lưu cart vào localStorage mỗi khi cart thay đổi
+  useEffect(() => {
+    console.log("Cart:", cart);
+    localStorage.setItem("cart", JSON.stringify(cart));
+  }, [cart]);
+
+  const removeItem = (product) => {
+    setCart((prevCart) => prevCart.filter((item) => item.id !== product.id));
+  };
+
   const addToCart = (product) => {
     setCart((prevCart) => {
       const existingProduct = prevCart.find((item) => item.id === product.id);
@@ -27,7 +45,6 @@ export const CartProvider = ({ children }) => {
     });
   };
 
-  // Hàm giảm số lượng sản phẩm trong giỏ hoặc xóa sản phẩm nếu số lượng là 1
   const removeFromCart = (product) => {
     setCart((prevCart) => {
       const existingProduct = prevCart.find((item) => item.id === product.id);
@@ -44,7 +61,9 @@ export const CartProvider = ({ children }) => {
   };
 
   return (
-    <CartContext.Provider value={{ cart, addToCart, removeFromCart }}>
+    <CartContext.Provider
+      value={{ cart, addToCart, removeFromCart, removeItem }}
+    >
       {children}
     </CartContext.Provider>
   );

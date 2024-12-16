@@ -191,7 +191,10 @@ const AllCategory = ({ allCategoryClick, toggleAllCategoryClick }) => {
                 </div>
 
                 <div className="mt-[28px] w-[213px]">
-                  <div className="flex cursor-pointer items-center justify-between pt-[28px]">
+                  <div
+                    onClick={toggleModeClick}
+                    className="flex cursor-pointer items-center justify-between pt-[28px]"
+                  >
                     <div className="font-lato text-[14px] font-bold uppercase">
                       Model
                     </div>
@@ -200,7 +203,6 @@ const AllCategory = ({ allCategoryClick, toggleAllCategoryClick }) => {
                         className={`transition-all duration-200 ${modeClick ? " " : "rotate-180"}`}
                         src={muitenlen}
                         alt="muitenlen"
-                        onClick={toggleModeClick}
                       />
                     </div>
                   </div>
@@ -232,7 +234,10 @@ const AllCategory = ({ allCategoryClick, toggleAllCategoryClick }) => {
               {/* Style */}
 
               <div className="w-[213px]">
-                <div className="ml-[64px] mr-[32px] flex w-[213px] items-center justify-between pt-[28px]">
+                <div
+                  onClick={toggleStylelClick}
+                  className="ml-[64px] mr-[32px] flex w-[213px] items-center justify-between pt-[28px]"
+                >
                   <div className="font-lato text-[14px] font-bold uppercase">
                     Style
                   </div>
@@ -240,7 +245,6 @@ const AllCategory = ({ allCategoryClick, toggleAllCategoryClick }) => {
                     <img
                       src={muitenlen}
                       alt="muitenlen"
-                      onClick={toggleStylelClick}
                       className={`transition-all duration-200 ${styleClick ? " " : "rotate-180"}`}
                     />
                   </div>
@@ -271,7 +275,10 @@ const AllCategory = ({ allCategoryClick, toggleAllCategoryClick }) => {
               </div>
 
               <div className="w-[218px]">
-                <div className="ml-[64px] mt-[28px] flex w-[213px] items-center justify-between">
+                <div
+                  onClick={toggleColorClick}
+                  className="ml-[64px] mt-[28px] flex w-[213px] items-center justify-between"
+                >
                   <div className="font-lato text-[14px] font-bold uppercase">
                     Color
                   </div>
@@ -279,7 +286,6 @@ const AllCategory = ({ allCategoryClick, toggleAllCategoryClick }) => {
                     <img
                       src={muitenlen}
                       alt="muitenlen"
-                      onClick={toggleColorClick}
                       className={`transition-all duration-200 ${colorClick ? " " : "rotate-180"}`}
                     />
                   </div>
@@ -321,7 +327,10 @@ const AllCategory = ({ allCategoryClick, toggleAllCategoryClick }) => {
               {/* Size */}
 
               <div className="w-[218px]">
-                <div className="ml-[64px] mt-[28px] flex w-[213px] items-center justify-between">
+                <div
+                  onClick={toggleSizeClick}
+                  className="ml-[64px] mt-[28px] flex w-[213px] items-center justify-between"
+                >
                   <div className="font-lato text-[14px] font-bold uppercase">
                     Size
                   </div>
@@ -329,7 +338,6 @@ const AllCategory = ({ allCategoryClick, toggleAllCategoryClick }) => {
                     <img
                       src={muitenlen}
                       alt="muitenlen"
-                      onClick={toggleSizeClick}
                       className={`transition-all duration-200 ${sizeClick ? " " : "rotate-180"}`}
                     />
                   </div>
@@ -358,7 +366,10 @@ const AllCategory = ({ allCategoryClick, toggleAllCategoryClick }) => {
                 <img src={Horizontal} alt="Horizontal" />
               </div>
               <div>
-                <div className="ml-[64px] mt-[28px] flex w-[213px] items-center justify-between">
+                <div
+                  onClick={togglePriceClick}
+                  className="ml-[64px] mt-[28px] flex w-[213px] items-center justify-between"
+                >
                   <div className="font-lato text-[14px] font-bold uppercase">
                     Price
                   </div>
@@ -366,7 +377,6 @@ const AllCategory = ({ allCategoryClick, toggleAllCategoryClick }) => {
                     <img
                       src={muitenlen}
                       alt="muitenlen"
-                      onClick={togglePriceClick}
                       className={`transition-all duration-200 ${priceClick ? " " : "rotate-180"}`}
                     />
                   </div>
