@@ -5,14 +5,20 @@
     "preview": "vite preview"
   },
   "devDependencies": {
+    "@tailwindcss/postcss": "^4.0.17",
     "@vitejs/plugin-react": "^4.3.4",
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.3",
     "prettier": "^3.3.3",
     "prettier-plugin-tailwindcss": "^0.6.6",
+    "tailwindcss": "^4.0.17",
     "vite": "^6.2.3"
   },
   "dependencies": {
+    "@nextui-org/react": "^2.6.11",
     "@react-oauth/google": "^0.12.1",
     "axios": "^1.7.7",
+    "prop-types": "^15.8.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-router-dom": "^7.4.0"
