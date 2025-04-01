@@ -369,7 +369,7 @@ const ProductDetails = () => {
                     onClick={() => {
                       addToCart(product);
                     }}
-                    className="py-2 font-lato text-[14px] uppercase text-black"
+                    className="py-2 font-lato text-[14px] uppercase text-black active:text-gray-300 duration-2500 ease-in-out" 
                   >
                     Add to basket
                   </button>

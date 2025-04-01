@@ -36,7 +36,7 @@ const YourMight = ({ products, product, addToCart }) => {
                   onClick={() => {
                     addToCart(data);
                   }}
-                  className="flex items-center gap-3 rounded-md border-2 px-[25.5px] py-2"
+                  className="flex items-center gap-3 rounded-md border-2 px-[25.5px] py-2 active:text-gray-300 duration-2500 ease-in-out"
                 >
                   <div className="font-lato text-[14px] text-[#555555]">
                     ${data.price}
