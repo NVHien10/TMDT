@@ -9,7 +9,7 @@ export default {
   theme: {
     extend: {
       screens: {
-        smm: "479px", // Tạo thêm một breakpoint cho màn hình 478px
+        smm: "326px", // Tạo thêm một breakpoint cho màn hình 478px
         mdd: "991px", // Breakpoint tùy chỉnh cho màn hình 991px
         lgg: "1440px", // Breakpoint tùy chỉnh cho màn hình 1440px
       },
