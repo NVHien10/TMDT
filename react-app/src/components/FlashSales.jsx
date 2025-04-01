@@ -5,6 +5,7 @@ import bag from "../image/frm/frm2/photo bag.png";
 import Giay from "../image/frm/frm2/photoGiay.png";
 import bagHong from "../image/frm/frm2/photobagHong.png";
 import Sticker from "../image/frm/frm2/photoSticker.png";
+import React from 'react';
 
 const FlashSale = [
   {

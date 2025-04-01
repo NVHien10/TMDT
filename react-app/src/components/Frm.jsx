@@ -9,6 +9,7 @@ import Adv from "./Adv.jsx";
 import Adv2 from "./Adv2.jsx";
 import PropTypes from "prop-types";
 import TopTram from "./TopTram.jsx";
+import React from 'react';
 
 const Frm = ({ showMenu }) => {
   

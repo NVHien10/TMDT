@@ -4,6 +4,7 @@ import { fetchProducts } from "../services/api";
 import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
 import { Link } from "react-router-dom";
+import React from 'react';
 
 import Header from "./Header";
 import thungRac from "../image/frm/Cart/thungRac.png";

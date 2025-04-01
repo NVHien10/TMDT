@@ -1,6 +1,7 @@
 import { Slider } from "@nextui-org/react";
 import { useState } from "react";
 import { Size, Color } from "./CategoryShow";
+import React from 'react';
 
 const Model = [
   {

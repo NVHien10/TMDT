@@ -2,6 +2,7 @@ import Footer from "./Footer";
 import Header from "./Header";
 import star from "../image/frm/frm2/Star 2.png";
 import NavHeader from "../NavHeader";
+import React from 'react';
 //import NoResult from "./image/electronic/noresult.png";
 import iconWarning from "../image/electronic/warning.png";
 import NoResultMin from "../image/electronic/noresultMin.png";

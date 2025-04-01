@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+const { nextui } = require("@nextui-org/react");
 export default {
   content: [
     "./index.html",
@@ -8,9 +9,9 @@ export default {
   theme: {
     extend: {
       screens: {
-        smm: "479px",
-        mdd: "991px",
-        lgg: "1440px",
+        smm: "479px", // Tạo thêm một breakpoint cho màn hình 478px
+        mdd: "991px", // Breakpoint tùy chỉnh cho màn hình 991px
+        lgg: "1440px", // Breakpoint tùy chỉnh cho màn hình 1440px
       },
       fontFamily: {
         lato: ["Lato", "sans-serif"],
@@ -18,5 +19,5 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [nextui()],
 };

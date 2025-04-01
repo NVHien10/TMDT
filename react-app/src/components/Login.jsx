@@ -12,6 +12,7 @@ import Footer from "./Footer";
 import SignUp from "./SignUp";
 import SignIn from "./SignIn";
 import { Link } from "react-router-dom";
+import React from 'react';
 
 const Login = () => {
   const { cart } = useContext(CartContext);

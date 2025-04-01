@@ -4,6 +4,7 @@ import iconshow from "../image/Login/iconshow.png";
 import Horizontal from "../image/frm/frm2/Horizontal.png";
 import logoGG from "../image/Login/logoGG.png";
 import chamthang from "../image/Login/chamthang.png";
+import React from 'react';
 
 import PropTypes from "prop-types";
 import { useState } from "react";
@@ -11,7 +12,7 @@ import { fetchLogin, fetchUserData } from "../services/api";
 //import { useEffect } from "react";
 //import {  fetchGetUser } from "../services/api";
 import { GoogleLogin } from "@react-oauth/google";
-//import { useGoogleLogin } from "@react-oauth/google";
+import { useGoogleLogin } from "@react-oauth/google";
 //import axios from "axios";
 //import { use } from "react";
 import Dialog from "./Dialog";

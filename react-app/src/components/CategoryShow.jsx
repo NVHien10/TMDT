@@ -2,6 +2,7 @@ import { useState, useEffect, useCallback, useContext } from "react";
 import { Link } from "react-router-dom";
 import { fetchProducts } from "../services/api";
 import { CartContext } from "../context/CartContext";
+import React from 'react';
 
 import PropTypes from "prop-types";
 import Header from "./Header";

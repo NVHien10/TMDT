@@ -7,6 +7,7 @@ import aoxanh from "../image/frm/frm2/aoxanh.png";
 import aoxanhrieu from "../image/frm/frm2/aoxanhrieu.png";
 import aoden from "../image/frm/frm2/aoden.png";
 import { useState, useEffect, useCallback } from "react";
+import React from 'react';
 
 //import { Link } from "react-router-dom";
 import { fetchProducts } from "../services/api";

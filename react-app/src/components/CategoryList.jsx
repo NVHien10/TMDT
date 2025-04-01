@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import PropTypes from "prop-types"; // Import prop-types
+import React from 'react';
 
 const CategoryList = ({ setCategoryFilter }) => {
   const [categories, setCategories] = useState([]);

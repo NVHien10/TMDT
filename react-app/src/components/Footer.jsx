@@ -8,6 +8,8 @@ import telegram from "../image/header/Subtract.png";
 import thanhTimKiem from "../image/footer/VectorTImKiem.png";
 import divider from "../image/footer/Divider.png";
 import PropTypes from "prop-types";
+import React from 'react';
+
 const Foot = [
   {
     id: 1,

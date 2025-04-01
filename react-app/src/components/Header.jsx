@@ -18,6 +18,7 @@ import menuX from "../image/header/VectorX.png";
 import Horizontal from "../image/frm/frm2/Horizontal.png";
 
 import PropTypes from "prop-types";
+import React from 'react';
 //import intergram1 from "./image/header/intergram1.png";
 // import intergram2 from "./image/header/intergram2.png";
 // import intergram3 from "./image/header/intergram3.png";

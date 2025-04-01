@@ -12,6 +12,7 @@ import YourMight from "./YourMight";
 import Details from "./Details";
 import Reviews from "./Reviews";
 import Shipping from "./Shipping";
+import React from 'react';
 
 import muitenphai from "../image/header/MuiTenPhai.png";
 import disabled from "../image/frm/ProductDetails/disabled.png";

@@ -6,6 +6,7 @@ import imfCago from "../image/frm/ProductDetails/imfCago.png";
 import paypal from "../image/frm/ProductDetails/paypal.png";
 import master from "../image/frm/ProductDetails/master.png";
 import bitcoin from "../image/frm/ProductDetails/bitcoin.png";
+import React from 'react';
 
 const Ship = [
   {

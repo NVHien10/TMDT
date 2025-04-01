@@ -16,6 +16,7 @@ import CategoryShow from "./components/CategoryShow.jsx";
 import ProductDetails from "./components/ProductDetails.jsx";
 import ShowCart from "./components/ShowCart.jsx";
 import Login from "./components/Login.jsx";
+import React from 'react';
 
 const GOOGLE_CLIENT_ID =
   "939477678892-o19m8j8jh2ssgcodtv3jilfbsakonh0p.apps.googleusercontent.com"; // Thay thế bằng clientId

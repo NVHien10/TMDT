@@ -3,6 +3,8 @@ import trendPhoto1 from "../image/frm/frm2/4_org_zoom 1.png";
 import muiTenBag from "../image/frm/frm2/Vector175_bag.png";
 import trendPhoto2 from "../image/frm/frm2/top.png";
 import trendPhoto3 from "../image/frm/frm2/top2.png";
+import React from 'react';
+
 
 const Trendingg = [
   {

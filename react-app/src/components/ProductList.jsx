@@ -3,6 +3,7 @@ import { CartContext } from "../context/CartContext";
 import CategoryList from "./CategoryList";
 import { fetchProducts } from "../services/api"; // Import optimized API function
 import PropTypes from "prop-types"; // Import prop-types
+import React from 'react';
 
 const ProductList = () => {
   const [products, setProducts] = useState([]);

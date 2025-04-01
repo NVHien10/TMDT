@@ -1,4 +1,5 @@
 import { Progress } from "@nextui-org/react";
+import React from 'react';
 
 import star from "../image/frm/frm2/Star 2.png";
 import StarNua from "../image/frm/ProductDetails/StarNua.png";

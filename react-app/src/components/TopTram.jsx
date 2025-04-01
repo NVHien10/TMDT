@@ -5,6 +5,8 @@ import blackGirl from "../image/frm/frm2/photoCoGaiAoDen.png";
 import aoxanh from "../image/frm/frm2/aoxanh.png";
 import aoxanhrieu from "../image/frm/frm2/aoxanhrieu.png";
 import aoden from "../image/frm/frm2/aoden.png";
+import React from 'react';
+
 const Top100 = [
   {
     id: 1,

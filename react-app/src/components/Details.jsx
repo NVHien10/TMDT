@@ -7,6 +7,7 @@ import Layer3 from "../image/frm/ProductDetails/Layer3.png";
 import test from "../image/frm/ProductDetails/026test.png";
 import muiTenLen from "../image/frm/ProductDetails/muiTenLen.png";
 import Horizontal from "../image/frm/frm2/Horizontal.png";
+import React from 'react';
 
 const Details = () => {
   return (

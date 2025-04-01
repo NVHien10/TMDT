@@ -4,6 +4,7 @@ import tron from "../image/Login/tron.png";
 import iconshow from "../image/Login/iconshow.png";
 import logoGG from "../image/Login/logoGG.png";
 import PropTypes from "prop-types";
+import React from 'react';
 
 import { useState } from "react";
 import { fetchAddUser } from "../services/api";
